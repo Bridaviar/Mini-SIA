@@ -4,19 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Course {
-    private String name;
     private List<Student> students;
     private List<Subject> subjects;
 
     public Course(String name) {
-        this.name = name;
         this.students = new ArrayList<>();
         this.subjects = new ArrayList<>();
     }
 
-    public String getName() {
-        return name;
-    }
 
     public List<Student> getStudents() {
         return students;

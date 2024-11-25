@@ -1,9 +1,6 @@
 import com.grades.model.*;
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -61,7 +58,7 @@ public class Main {
     }
 
     private static void addStudentsFromFile(Course course, Scanner scanner) {
-        System.out.print("\nEntre el path donde esta ubicado el archivo: ");
+        System.out.print("\nIngrese el path donde esta ubicado el archivo: ");
         String fileName = scanner.nextLine();
         try {
             File file = new File(fileName);
@@ -77,8 +74,6 @@ public class Main {
             System.out.println("Estudiantes añadidos correctamente.");
         } catch (FileNotFoundException e) {
             System.out.println("Archivo no encontrado: " + e.getMessage());
-        } catch (Exception e) {
-            System.out.println("Un error a ocurrido mientras se leia el archivo, intentelo de nuevo con un archivo valido " + e.getMessage());
         }
     }
 
