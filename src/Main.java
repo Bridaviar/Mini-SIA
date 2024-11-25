@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Course course = new Course("Programming II"); // Crea un nuevo curso
+        Course course = new Course("Programming II");
 
         while (true) {
             System.out.println("\n=== Sistema de Calificación ===");
@@ -23,11 +23,11 @@ public class Main {
             int option;
             try {
                 option = scanner.nextInt();
-                scanner.nextLine(); // Consumir el salto de línea
+                scanner.nextLine();
             } catch (java.util.InputMismatchException e) {
                 System.out.println("Opción invalida. Ingrese una opción del menú.");
-                scanner.nextLine(); // Limpiar el buffer
-                continue; // Volver al principio del bucle
+                scanner.nextLine();
+                continue;
             }
 
             try {
@@ -91,10 +91,10 @@ public class Main {
             int numGrades;
             try {
                 numGrades = scanner.nextInt();
-                scanner.nextLine(); // Consumir el salto de línea
+                scanner.nextLine();
             } catch (java.util.InputMismatchException e) {
                 System.out.println("Debe ser un número.");
-                scanner.nextLine(); // Limpiar el buffer
+                scanner.nextLine();
                 continue;
             }
 
@@ -105,11 +105,11 @@ public class Main {
                 double percentage;
                 try {
                     percentage = scanner.nextDouble();
-                    scanner.nextLine(); // Consumir el salto de línea
+                    scanner.nextLine();
                 } catch (java.util.InputMismatchException e) {
                     System.out.println("Error, ingrese un numero de 0 a 100.");
-                    scanner.nextLine(); // Limpiar el buffer
-                    i--; //Decrementar i para repetir la iteración
+                    scanner.nextLine();
+                    i--;
                     continue;
                 }
                 totalPercentage += percentage;
@@ -144,10 +144,10 @@ public class Main {
             double score;
             try {
                 score = scanner.nextDouble();
-                scanner.nextLine(); // Consumir el salto de línea
+                scanner.nextLine();
             } catch (java.util.InputMismatchException e) {
                 System.out.println("Valor incorrecto, ingresa un número de 0 a 5.");
-                scanner.nextLine(); // Limpiar el buffer
+                scanner.nextLine();
                 return;
             }
             if (score < 0 || score > 5) {
