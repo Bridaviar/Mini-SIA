@@ -61,7 +61,7 @@ public class Main {
     }
 
     private static void addStudentsFromFile(Course course, Scanner scanner) {
-        System.out.print("Entre el path donde esta ubicado el archivo: ");
+        System.out.print("\nEntre el path donde esta ubicado el archivo: ");
         String fileName = scanner.nextLine();
         try {
             File file = new File(fileName);
@@ -87,7 +87,7 @@ public class Main {
         double totalPercentage = 0;
 
         while (true) {
-            System.out.print("Ingrese el número de notas: ");
+            System.out.print("\nIngrese el número de notas: ");
             int numGrades;
             try {
                 numGrades = scanner.nextInt();
@@ -128,9 +128,9 @@ public class Main {
 
     private static void gradeStudents(Course course, Scanner scanner) {
         if (course.getSubjects().isEmpty()) {
-            throw new IllegalStateException("Debes añadir las notas antes de poder calificarlas.");
+            throw new IllegalStateException("\nDebes añadir las notas antes de poder calificarlas.");
         }
-        System.out.print("Ingresa el ID del estudiante: ");
+        System.out.print("\nIngresa el ID del estudiante: ");
         String id = scanner.nextLine();
         Student student = course.getStudentById(id);
 
@@ -164,7 +164,7 @@ public class Main {
     private static void viewStudentList(Course course) {
         List<Student> students = course.getStudents();
         if (students.isEmpty()) {
-            System.out.println("No hay estudiantes registrados todavía.");
+            System.out.println("\nNo hay estudiantes registrados todavía.");
             return;
         }
 
@@ -184,6 +184,6 @@ public class Main {
 
     private static void viewCourseAverage(Course course) {
         double average = course.calculateCourseAverage();
-        System.out.printf("Promedio del curso: %.2f\n", average);
+        System.out.printf("\nPromedio del curso: %.2f\n", average);
     }
 }
